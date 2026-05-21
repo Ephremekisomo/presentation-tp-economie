@@ -88,6 +88,30 @@
         .point-image-container {
             height: 40vh; /* Hauteur définie pour mobile */
             width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-slider {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .point-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .point-image.active {
+            opacity: 1;
+            position: static;
         }
 
         .point-image {
@@ -235,144 +259,217 @@
 <div class="container">
     <section class="point-section">
         <div class="point-image-container">
-            <img src="https://congoprofond.net/wp-content/uploads/2024/07/IMG-20240722-WA0080.jpg" alt="Potentiel de la RDC" class="point-image">
+            <div class="image-slider">
+                <img src="https://congoprofond.net/wp-content/uploads/2024/07/IMG-20240722-WA0080.jpg" alt="Potentiel de la RDC" class="point-image active">
+                <img src="https://www.gopa.eu/sites/default/files/styles/16_9_512x288_focal_point_webp/public/2025-03/gopa-website-sectors-climate-natural-ressources-and-environment.png.webp?h=5c593260&itok=uldWjnGF" alt="Ressources naturelles" class="point-image">
+              <!--  <img src="https://whc.unesco.org/uploads/thumbs/site_0718_0013-400-400-20120627160923.webp" alt="Okapi" class="point-image"> -->
+                <img src="https://safaris-a-la-carte.com/thumb/ar__x/f__jpg/h__512/q__60/w__1280/zc__1/src/fichier/p_entete/15198/entete_img_rwanda_family_of_gorillas_shutterstock_fiona_ayerst_74180836.jpg" alt="Gorille" class="point-image">
+            </div>
         </div>
         <div class="point-content">
             <h2>Introduction</h2>
-            <p>La RDC possède un potentiel immense (terres agricoles, mines, population). Pourtant, la pauvreté et l'insécurité freinent son envol. Ce programme explore les 6 freins majeurs et propose des solutions.</p>
+            <p>La République Démocratique du Congo est un pays doté d’immenses richesses naturelles et humaines. Avec ses vastes terres agricoles, ses nombreux cours d’eau, ses ressources minières importantes et sa grande population, la RDC possède un potentiel considérable pour devenir l’un des pays les plus développés d’Afrique. Pourtant, malgré ces avantages, le pays continue de faire face à de nombreux problèmes économiques, politiques et sociaux qui ralentissent son développement.. Ce programme explore les 6 freins majeurs et propose des solutions.</p>
         </div>
     </section>
+</div>
 
     <!-- Point 1 -->
     <div class="point-section">
         <div class="point-image-container">
-            <img src="https://s.rfi.fr/media/display/789108a0-a4b6-11eb-bb02-005056bff430/w:1024/p:16x9/000_1P33XP.jpg" alt="Sécurité" class="point-image">
+            <div class="image-slider">
+                <img src="https://s.rfi.fr/media/display/789108a0-a4b6-11eb-bb02-005056bff430/w:1024/p:16x9/000_1P33XP.jpg" alt="Sécurité" class="point-image active">
+                <img src="https://africacenter.org/wp-content/uploads/2025/02/DRC-New-Phase-3x2-1.jpg" alt="Conflit RDC nouvelle phase" class="point-image">
+                <img src="https://www.unicef.org/drcongo/sites/unicef.org.drcongo/files/styles/press_release_feature/public/ITURI_LeMoyne_PR02.jpg.webp?itok=JiNRU6gP" alt="Violence en Ituri" class="point-image">
+                <img src="https://africacenter.org/wp-content/uploads/2017/09/DRC-militia-patrol-1000x405.jpg" alt="Patrouille de milice" class="point-image">
+            </div>
         </div>
         <div class="point-content">
             <h3>1. L'insécurité et les conflits armés</h3>
-            <p>L’insécurité, surtout dans la partie Est, crée un climat de violence qui pousse les familles à fuir et détruit les infrastructures. Les agriculteurs ne peuvent plus cultiver et les investisseurs hésitent à s'installer dans un environnement instable.</p>
+            <p>L’un des plus grands obstacles au développement de la RDC est l’insécurité. Depuis plusieurs années, surtout dans la partie Est du pays, les populations vivent dans un climat de violence causé par les groupes armés, les conflits communautaires et les guerres répétitives. Cette situation a des conséquences graves sur la vie des habitants et sur l’économie du pays.
+
+L’insécurité pousse plusieurs familles à quitter leurs villages pour chercher refuge ailleurs. Beaucoup de personnes perdent leurs biens, leurs terres et leurs activités économiques. Les écoles, les centres de santé, les routes et d’autres infrastructures sont souvent détruits pendant les conflits. Dans certaines régions, les agriculteurs ne peuvent même plus cultiver leurs champs à cause de la peur des attaques.
+
+De plus, l’insécurité décourage les investisseurs nationaux et étrangers. Les entreprises hésitent à investir dans un environnement instable où leurs activités peuvent être menacées. Cela réduit les opportunités d’emploi et ralentit le développement économique.
+
+
+</p>
         </div>
     </div>
 
     <!-- Solution 1 -->
     <div class="point-section solution-variant">
         <div class="point-image-container">
-            <img src="https://diplomatie.gouv.cd/wp-content/uploads/2026/02/HA4VyeTWgAEImgR-1080x675.jpeg" alt="Paix et Sécurité" class="point-image">
+            <div class="image-slider">
+                <img src="images/paix1.jpg" alt="Force armée de la RDC" class="point-image active">
+                <!--<img src="https://defense.gouv.cd/fr/histoire-des-fardc" alt="Histoire des FARDC" class="point-image"> -->
+            </div>
         </div>
         <div class="point-content">
             <span class="solution-tag">NOTRE SOLUTION</span>
             <h3>Rétablir la Paix et la Sécurité</h3>
-            <p>Il est impératif de renforcer la sécurité nationale en améliorant les conditions de vie et de travail des forces de défense. Parallèlement, favoriser le dialogue inclusif pour la réconciliation est essentiel pour une stabilité durable.</p>
+            <p>Pour mettre fin à cette situation, il est important de renforcer la sécurité nationale et de restaurer l’autorité de l’État dans toutes les provinces du pays. Le gouvernement doit améliorer les conditions des forces de défense et de sécurité afin qu’elles puissent protéger efficacement la population. Il faut également favoriser le dialogue, la paix et la réconciliation entre les communautés.</p>
         </div>
     </div>
 
     <!-- Point 2 -->
     <div class="point-section">
         <div class="point-image-container">
-            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800" alt="Gouvernance" class="point-image">
+            <div class="image-slider">
+                <img src="images/corruption1.jpg" alt="Corruption et argent" class="point-image active">
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800" alt="Gouvernance" class="point-image">
+                <img src="images/egalite-gouvernance.jpg" alt="Égalité et justice dans la gouvernance" class="point-image">
+            </div>
         </div>
         <div class="point-content">
             <h3>2. La corruption et la mauvaise gouvernance</h3>
-            <p>Le détournement des ressources publiques pour des intérêts personnels prive l'État des moyens nécessaires pour construire des routes ou des hôpitaux. Cela crée des inégalités et réduit la confiance des citoyens.</p>
+            <p>La corruption constitue un autre grand problème qui freine le développement de la RDC. Dans plusieurs secteurs, certaines personnes utilisent les ressources publiques pour leurs intérêts personnels au lieu de travailler pour le bien de la population. Cette mauvaise gestion empêche l’État de répondre correctement aux besoins des citoyens.
+
+L’argent destiné à la construction des routes, des écoles ou des hôpitaux est parfois détourné. Certains responsables favorisent leurs proches dans l’attribution des marchés publics ou des emplois. Cette situation crée des inégalités et réduit la confiance de la population envers les institutions publiques.
+
+La mauvaise gouvernance se manifeste également par le manque de transparence dans la gestion des ressources du pays. Lorsque les dirigeants ne rendent pas compte de leur gestion, les richesses nationales ne profitent pas à l’ensemble de la population.
+</p>
         </div>
     </div>
 
     <!-- Solution 2 -->
     <div class="point-section solution-variant">
         <div class="point-image-container">
-            <img src="https://transparenceinfo.com/wp-content/uploads/2025/10/IMG-20251020-WA0432-1170x731.jpg" alt="Justice" class="point-image">
+            <div class="image-slider">
+                <img src="images/transparence1.jpg" alt="Cour constitutionnelle RDC" class="point-image active">
+              <!-- <img src="images/transparence2.jpg" alt="Transparence des contrats" class="point-image"> -->
+            </div>
         </div>
         <div class="point-content">
             <span class="solution-tag">NOTRE SOLUTION</span>
             <h3>Transparence et État de Droit</h3>
-            <p>La solution réside dans le renforcement de l'appareil judiciaire pour sanctionner sévèrement les détournements. L'indépendance des institutions de contrôle garantira une gestion saine des richesses du pays.</p>
+            <p>Pour lutter contre ce problème, il est nécessaire de renforcer la justice afin que les personnes impliquées dans les détournements soient sanctionnées. Les institutions de contrôle doivent fonctionner de manière indépendante et transparente.</p>
         </div>
     </div>
 
     <!-- Point 3 -->
     <div class="point-section">
         <div class="point-image-container">
-            <img src="https://prod.cdn-medias.jeuneafrique.com/cdn-cgi/image/q=auto,f=auto,metadata=none,width=1215,fit=cover/https://prod.cdn-medias.jeuneafrique.com/medias/2016/01/19/cobalt_mines.jpg" alt="Ressources" class="point-image">
+            <div class="image-slider">
+                <img src="https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/08-06-2021_UNICEF_UNI44498_Childminers_DRC.jpg/image1024x768.jpg" alt="Enfants mineurs en RDC" class="point-image active">
+                <img src="https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/09-06-2021_UNICEF-402419_DRC.jpg/image1440x560cropped.jpg" alt="Exploitation minière RDC" class="point-image">
+                
+            </div>
         </div>
         <div class="point-content">
             <h3>3. La mauvaise exploitation des ressources</h3>
-            <p>Malgré des minerais précieux (cobalt, cuivre, or), la population reste pauvre car les ressources sont exportées brutes. Le pays perd ainsi la valeur ajoutée et les emplois liés à la transformation locale.</p>
+            <p>La RDC fait partie des pays les plus riches du monde en ressources minières. Le pays possède du cobalt, du cuivre, de l’or, du diamant, du coltan et beaucoup d’autres minerais recherchés sur le marché international. Pourtant, malgré cette richesse, une grande partie de la population vit dans la pauvreté.
+
+L’un des problèmes majeurs est que les ressources naturelles sont souvent mal exploitées. Dans certaines régions, l’exploitation minière se fait de manière illégale ou désorganisée. Une partie des richesses quitte le pays sans profiter réellement à la population congolaise.
+
+Le pays exporte souvent les minerais sous forme brute au lieu de les transformer localement. Cela prive la RDC de nombreux emplois et réduit les bénéfices économiques. De plus, certains contrats signés avec des entreprises étrangères ne sont pas toujours avantageux pour le pays
+</p>
         </div>
     </div>
 
     <!-- Solution 3 -->
     <div class="point-section solution-variant">
         <div class="point-image-container">
-            <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=800" alt="Industrie" class="point-image">
+            <div class="image-slider">
+                <img src="https://ite-prod-cdn-end.azureedge.net/sharedmedia/miningindaba/media/assets/mi27_content_pillar_industrialisation.jpg" alt="Industrialisation minière" class="point-image active">
+            </div>
         </div>
         <div class="point-content">
             <span class="solution-tag">NOTRE SOLUTION</span>
             <h3>Industrialisation et Transformation</h3>
-            <p>Il faut impérativement passer d'une économie d'extraction à une économie de transformation. Créer des usines locales pour traiter nos minerais permettra de générer des milliers d'emplois et de garder la richesse au pays.</p>
+            <p>Pour améliorer cette situation, la RDC doit renforcer le contrôle de ses ressources naturelles et favoriser leur transformation sur place. Les revenus miniers doivent être utilisés pour financer les écoles, les hôpitaux, les routes et d’autres projets de développement.</p>
         </div>
     </div>
 
     <!-- Point 4 -->
     <div class="point-section">
         <div class="point-image-container">
-            <img src="https://pbs.twimg.com/media/GcI6kMdW4AAI-EQ.jpg" alt="Infrastructures" class="point-image">
+            <div class="image-slider">
+                <img src="https://actualite.cd/sites/default/files/styles/800_600/public/2021-10/Route%20nationale%20num%C3%A9ro%2027%20%28RN27%29.jpg?itok=ucbC6lyP" alt="Routes en mauvais état" class="point-image active">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqvJ2-juPdKnpjvkM19mT4l3xuo9PzgPgnkg6gd3mKIA&s" alt="Routes dégradées RDC" class="point-image">
+            </div>
         </div>
         <div class="point-content">
             <h3>4. Le manque d'infrastructures</h3>
-            <p>Des routes impraticables isolent les provinces et augmentent le prix des produits. Le manque d'accès permanent à l'électricité freine également toute tentative d'industrialisation majeure.</p>
+            <p>Les infrastructures jouent un rôle très important dans le développement d’un pays. Les routes, les ponts, les hôpitaux, les écoles, l’électricité et les réseaux de communication permettent aux populations de travailler, de se déplacer et d’avoir accès aux services essentiels.
+
+En RDC, plusieurs infrastructures sont insuffisantes ou en mauvais état. Dans certaines régions, les routes sont presque impraticables, surtout pendant la saison des pluies. Cela rend difficile le transport des produits agricoles vers les marchés et augmente le coût de la vie.
+
+Le manque d’électricité limite également le développement industriel. Beaucoup d’entreprises ne peuvent pas fonctionner correctement à cause des coupures fréquentes de courant. Certaines populations n’ont même pas accès à l’eau potable ou aux soins de santé de base.
+</p>
         </div>
     </div>
 
     <!-- Solution 4 -->
     <div class="point-section solution-variant">
         <div class="point-image-container">
-            <img src="https://karannafrica.com/wp-content/uploads/2025/06/Lavenir-du-developpement-des-infrastructures-en-RDC.webp" alt="Infrastructures" class="point-image">
+            <div class="image-slider">
+                <img src="https://karannafrica.com/wp-content/uploads/2025/06/Lavenir-du-developpement-des-infrastructures-en-RDC.webp" alt="Infrastructures" class="point-image active">
+            
+            </div>
         </div>
         <div class="point-content">
             <span class="solution-tag">NOTRE SOLUTION</span>
             <h3>Modernisation des Infrastructures</h3>
-            <p>L'État doit investir massivement dans les routes nationales et le rail pour désenclaver les territoires. Le développement du potentiel énergétique (comme le projet Inga) est la clé de l'industrialisation.</p>
+            <p>Pour résoudre ce problème, le gouvernement doit investir davantage dans la construction et la réhabilitation des infrastructures publiques.</p>
         </div>
     </div>
 
-    <!-- Point 5 -->
+<!-- Point 5 -->
     <div class="point-section">
         <div class="point-image-container">
-            <img src="https://b-onetv.cd/wp-content/uploads/2022/10/113852809.jpg" alt="Emploi" class="point-image">
+            <div class="image-slider">
+                <img src="https://b-onetv.cd/wp-content/uploads/2022/10/113852809.jpg" alt="Emploi" class="point-image active">
+                
+            </div>
         </div>
         <div class="point-content">
             <h3>5. Le chômage et la pauvreté</h3>
-            <p>Le chômage frappe de nombreux jeunes diplômés. Sans industries pour les employer, la pauvreté s'installe, poussant certains vers l'exode ou des activités précaires.</p>
+            <p>Le chômage touche particulièrement les jeunes en RDC. Chaque année, plusieurs diplômés terminent leurs études sans trouver du travail. Le manque d'industries et d'entreprises capables d'employer la population augmente le taux de chômage.
+
+Cette situation pousse certains jeunes vers la délinquance, les activités illégales ou l'émigration. La pauvreté devient alors un problème social important qui affecte plusieurs familles.
+</p>
         </div>
     </div>
 
     <!-- Solution 5 -->
     <div class="point-section solution-variant">
         <div class="point-image-container">
-            <img src="https://pouvoirsafrique.com//uploads/imported_images/uploads/2022/05/africa-businesspeople.jpg" alt="Emploi" class="point-image">
+            <div class="image-slider">
+                <img src="https://pouvoirsafrique.com//uploads/imported_images/uploads/2022/05/africa-businesspeople.jpg" alt="Emploi" class="point-image active">
+                
+            </div>
         </div>
         <div class="point-content">
             <span class="solution-tag">NOTRE SOLUTION</span>
             <h3>Soutien à l'Emploi et Entrepreneuriat</h3>
-            <p>Encourager l'entrepreneuriat des jeunes par des crédits à faible taux et moderniser l'agriculture pour en faire un secteur attractif. Le soutien aux PME locales est le moteur principal de la réduction de la pauvreté.</p>
+            <p>Pour lutter contre le chômage et la pauvreté, il faut encourager la création d'emplois et soutenir l'entrepreneuriat des jeunes. Les petites et moyennes entreprises doivent recevoir des aides financières et des formations. Le secteur agricole doit être modernisé grâce à l'utilisation de nouvelles techniques et d'équipements adaptés.</p>
         </div>
     </div>
 
     <!-- Point 6 -->
     <div class="point-section">
         <div class="point-image-container">
-            <img src="https://i0.wp.com/bice.org/app/uploads/2024/02/projet-education-5.webp?fit=1000%2C580&ssl=1" alt="Education" class="point-image">
+            <div class="image-slider">
+                <img src="https://i0.wp.com/bice.org/app/uploads/2024/02/projet-education-5.webp?fit=1000%2C580&ssl=1" alt="Education" class="point-image active">
+                
+            </div>
         </div>
         <div class="point-content">
-            <h3>6. Les problèmes liés à l’éducation</h3>
-            <p>Le manque de matériels et de bâtiments scolaires, couplé à une formation parfois inadaptée au marché du travail, freine l'innovation et la croissance économique à long terme.</p>
+            <h3>6. Les problèmes liés à l'éducation</h3>
+            <p>L'éducation est un élément essentiel pour le développement d'un pays. Une population bien formée contribue à l'innovation, à la croissance économique et à la bonne gouvernance.
+
+En RDC, plusieurs enfants n'ont pas accès à une éducation de qualité. Certaines écoles manquent de bâtiments, de matériels et d'enseignants qualifiés. Dans les zones touchées par les conflits, beaucoup d'enfants abandonnent les études à cause de l'insécurité ou de la pauvreté.
+</p>
         </div>
     </div>
 
     <!-- Solution 6 -->
     <div class="point-section solution-variant">
         <div class="point-image-container">
-            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Education" class="point-image">
+            <div class="image-slider">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Education" class="point-image active">
+                
+            </div>
         </div>
         <div class="point-content">
             <span class="solution-tag">NOTRE SOLUTION</span>
@@ -384,14 +481,18 @@
     <!-- Conclusion -->
     <div class="point-section solution-variant">
         <div class="point-image-container">
-            <img src="https://www.francetravail.fr/files/live/sites/PE/files/secteurs-metiers/Environnement/Dvlpt-durable-850x523.jpg" alt="Ensemble pour le développement" class="point-image">
+            <div class="image-slider">
+                <img src="https://www.francetravail.fr/files/live/sites/PE/files/secteurs-metiers/Environnement/Dvlpt-durable-850x523.jpg" alt="Ensemble pour le développement" class="point-image active">
+                <img src="https://www.un.org/sites/un.org/files/styles/full_width/public/2024-09/DRC-flag.jpg" alt="Drapeau RDC" class="point-image">
+            </div>
         </div>
         <div class="point-content">
             <h2>Conclusion</h2>
             <p>Le développement demande des efforts collectifs : sécurité, justice, et gestion responsable des ressources pour un avenir prospère.</p>
         </div>
+</div>
     </div>
-
+        
     <footer class="footer-biblio">
         <h3>Références Bibliographiques</h3>
         <ul>
@@ -459,6 +560,267 @@
             }
         }
     }
+
+    // Image slider for introduction
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.querySelector('.image-slider');
+        if (slider) {
+            const images = slider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            // Show first image
+            images[currentIndex].classList.add('active');
+
+            // Change image every 4 seconds
+            setInterval(() => {
+                // Remove active class from current image
+                images[currentIndex].classList.remove('active');
+                
+                // Move to next image
+                currentIndex = (currentIndex + 1) % images.length;
+                
+                // Add active class to new current image
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for insecurity section
+    document.addEventListener('DOMContentLoaded', function() {
+        const insecuritySlider = document.querySelector('.point-section:nth-of-type(2) .image-slider');
+        if (insecuritySlider) {
+            const images = insecuritySlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            // Show first image
+            images[currentIndex].classList.add('active');
+
+            // Change image every 4 seconds
+            setInterval(() => {
+                // Remove active class from current image
+                images[currentIndex].classList.remove('active');
+                
+                // Move to next image
+                currentIndex = (currentIndex + 1) % images.length;
+                
+                // Add active class to new current image
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for solution 1 section
+    document.addEventListener('DOMContentLoaded', function() {
+        const solution1Slider = document.querySelector('.point-section:nth-of-type(3) .image-slider');
+        if (solution1Slider) {
+            const images = solution1Slider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            // Show first image
+            images[currentIndex].classList.add('active');
+
+            // Change image every 4 seconds
+            setInterval(() => {
+                // Remove active class from current image
+                images[currentIndex].classList.remove('active');
+                
+                // Move to next image
+                currentIndex = (currentIndex + 1) % images.length;
+                
+                // Add active class to new current image
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for corruption section (Point 2)
+    document.addEventListener('DOMContentLoaded', function() {
+        const corruptionSlider = document.querySelector('.point-section:nth-of-type(4) .image-slider');
+        if (corruptionSlider) {
+            const images = corruptionSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            // Show first image
+            images[currentIndex].classList.add('active');
+
+            // Change image every 4 seconds
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for transparency solution section
+    document.addEventListener('DOMContentLoaded', function() {
+        const transparencySlider = document.querySelector('.point-section:nth-of-type(6) .image-slider');
+        if (transparencySlider) {
+            const images = transparencySlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for resources exploitation section (Point 3)
+    document.addEventListener('DOMContentLoaded', function() {
+        const resourcesSlider = document.querySelector('.point-section:nth-of-type(5) .image-slider');
+        if (resourcesSlider) {
+            const images = resourcesSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for industrialisation solution section (Solution 3)
+    document.addEventListener('DOMContentLoaded', function() {
+        const industrialisationSlider = document.querySelector('.point-section:nth-of-type(6) .image-slider');
+        if (industrialisationSlider) {
+            const images = industrialisationSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for infrastructures section (Point 4)
+    document.addEventListener('DOMContentLoaded', function() {
+        const infrastructuresSlider = document.querySelector('.point-section:nth-of-type(7) .image-slider');
+        if (infrastructuresSlider) {
+            const images = infrastructuresSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for infrastructures solution section (Solution 4)
+    document.addEventListener('DOMContentLoaded', function() {
+        const infraSolSlider = document.querySelector('.point-section:nth-of-type(8) .image-slider');
+        if (infraSolSlider) {
+            const images = infraSolSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for unemployment section (Point 5)
+    document.addEventListener('DOMContentLoaded', function() {
+        const unemploymentSlider = document.querySelector('.point-section:nth-of-type(9) .image-slider');
+        if (unemploymentSlider) {
+            const images = unemploymentSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for employment solution section
+    document.addEventListener('DOMContentLoaded', function() {
+        const employmentSlider = document.querySelector('.point-section:nth-of-type(10) .image-slider');
+        if (employmentSlider) {
+            const images = employmentSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for education section (Point 6)
+    document.addEventListener('DOMContentLoaded', function() {
+        const educationSlider = document.querySelector('.point-section:nth-of-type(11) .image-slider');
+        if (educationSlider) {
+            const images = educationSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for education solution section
+    document.addEventListener('DOMContentLoaded', function() {
+        const educationSolSlider = document.querySelector('.point-section:nth-of-type(12) .image-slider');
+        if (educationSolSlider) {
+            const images = educationSolSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
+    
+    // Image slider for conclusion section
+    document.addEventListener('DOMContentLoaded', function() {
+        const conclusionSlider = document.querySelector('.point-section:nth-of-type(13) .image-slider');
+        if (conclusionSlider) {
+            const images = conclusionSlider.querySelectorAll('.point-image');
+            let currentIndex = 0;
+
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000);
+        }
+    });
 </script>
 
 </body>
